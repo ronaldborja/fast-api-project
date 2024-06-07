@@ -1,0 +1,1 @@
+from .cliente_natural_repository_impl import *

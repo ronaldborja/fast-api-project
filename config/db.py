@@ -1,13 +1,12 @@
 from typing import Generator
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from config import settings
+# from config import settings
 
-DATABASE_URL = "mysql+pymysql://root:root@localhost:3306/sistemabancario"
+DATABASE_URL = 'mysql+pymysql://root:root@localhost:3306/sistemabancario'
 read_engine = create_engine(DATABASE_URL)
 ReadSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=read_engine)
 
-DATABASE_URL = ""
 write_engine = create_engine(DATABASE_URL)
 WriteSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=write_engine)
 
