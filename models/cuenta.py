@@ -5,8 +5,8 @@ from sqlalchemy.orm import mapped_column, Mapped, relationship
 from config.db import Base
 
 
-class ClienteNatural(Base):
-    __tablename__ = "cuenta"
+class Cuenta(Base):
+    __tablename__ = "cuentas"
 
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
     tipo_cuenta: Mapped[str] = mapped_column(primary_key=True, index=True)
